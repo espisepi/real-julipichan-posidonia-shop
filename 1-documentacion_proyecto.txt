@@ -1,18 +1,22 @@
 =========== Listado de tareas del proyecto (paginas y componentes) ===============
 
-- Previo:
-    -- (1h) Montar proyecto con nextjs
-    -- NO HACER (8h) Añadir storybook y tener un hola mundo
-        ---- Hacer botones por defecto del proyecto
-        ---- Hacer campos de formulario por defecto del proyecto
-        ---- Elegir font type para el proyecto
-    -- (16h) Añadir threejs y r3f
-        ---- (8h) Configurar r3f
-        ---- (8h) tener el background (Ocean con imagen playa atardecer) del proyecto en 3D
 
-0) (22h) Layouts
-    - (20h) Header (Cabecera de la aplicacion, Navbar menu incluido)
-        - (8h) Titulo en 3D
+- Previo:
+    -- Crear proyecto con plantilla react-three-next
+    ++ yarn create r3f-app next real-julipichan-posidonia-shop -ts
+    -- Subir el proyecto a un nuevo repositorio de github desde el VSCode
+    -- Añadir los archivos de documentacion del proyecto con las tareas a realizar y realizar commit
+    -- Eliminar el <OrbitControls/> del template en Scene.jsx y realizar commit
+    -- Cambiar todas las extensiones jsx por tsx y realizar commit
+    -- comprobar que funcionan todos los comandos definidos en package.json (yarn start, dev, build...)
+    -- Desplegar el proyecto en vercel.
+
+0.0) Background commun para todas las paginas
+    - (8h) Titulo en 3D como background
+    - (8h) tener el background (Ocean con imagen playa atardecer) del proyecto en 3D
+
+0.1) (22h) Layouts
+    - (32h) Header (Cabecera de la aplicacion, Navbar menu incluido)
         - (8h) Icono menu hamburguesa y menu desplegable con opciones
         - (8h) Icono carrito y carrito desplegable (like amazon)
     - (2h) Footer
@@ -75,3 +79,25 @@
 
 11) Admin Listado de Pedidos Page (/admin/shop/orders)
     - Componente "Tabla con todos los pedidos y sus atributos, con paginación y ordenación por campos"
+
+
+
+
+
+
+
+
+
+
+
+========= MORRALLA ==============
+
+
+- Previo:
+    -- (1h) Montar proyecto con nextjs
+    -- NO HACER (8h) Añadir storybook y tener un hola mundo
+        ---- Hacer botones por defecto del proyecto
+        ---- Hacer campos de formulario por defecto del proyecto
+        ---- Elegir font type para el proyecto
+    -- (16h) Añadir threejs y r3f
+        ---- (8h) Configurar r3f
