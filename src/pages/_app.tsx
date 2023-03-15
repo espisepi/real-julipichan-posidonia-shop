@@ -11,6 +11,7 @@ export default function App({ Component, pageProps = { title: 'index' } }) {
   return (
     <>
       <Header title={pageProps.title} />
+      {/**@ts-ignore */}
       <Layout ref={ref}>
         <Component {...pageProps} />
         {/* The canvas can either be in front of the dom or behind. If it is in front it can overlay contents.
