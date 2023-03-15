@@ -1,0 +1,77 @@
+=========== Listado de tareas del proyecto (paginas y componentes) ===============
+
+- Previo:
+    -- (1h) Montar proyecto con nextjs
+    -- NO HACER (8h) Añadir storybook y tener un hola mundo
+        ---- Hacer botones por defecto del proyecto
+        ---- Hacer campos de formulario por defecto del proyecto
+        ---- Elegir font type para el proyecto
+    -- (16h) Añadir threejs y r3f
+        ---- (8h) Configurar r3f
+        ---- (8h) tener el background (Ocean con imagen playa atardecer) del proyecto en 3D
+
+0) (22h) Layouts
+    - (20h) Header (Cabecera de la aplicacion, Navbar menu incluido)
+        - (8h) Titulo en 3D
+        - (8h) Icono menu hamburguesa y menu desplegable con opciones
+        - (8h) Icono carrito y carrito desplegable (like amazon)
+    - (2h) Footer
+        - (2h) Icono instagram
+
+1) Home Page:
+    - (Con Julia, 4h) Componente "Descripción de la web"
+    - (8h) Componente "listado de productos con fotogrametria en 3D"
+    - (1h) Boton de "Ir a la tienda"
+
+2) Shop Page (/shop):
+    - (8h) Componente "Filtrar productos por tags y mostrar las tags de filtrado"
+    - (24h) Componente "Mostrar productos 1 a 1 con presentación estilo 3d like Mosha en 3D"
+    - (8h) Componente "Listado de productos en card"
+
+3) Product Details Page (/shop/product/{slug_product})
+    - (4h) Componente  "Modelo 3D orbitcontrols en 3D"
+    - (16h) Componente "Carrusel fotos"
+    - (8h) Atributos del producto: Precio, Medidas, Descripción, fotos -Array<String> con url- (en carrusel de fotos), modelo 3d -String con url- (en componente Modelo 3D OrbitControls)
+    - (4h) Botón añadir al carrito y botón comprar y botón añadir cantidad y quitar cantidad.
+
+4) Cart Page (/shop/cart)
+    - (8h) Componente "Listado de productos (entries) del carrito" con opción de: añadir/quitar cantidad, eliminar producto del carrito
+        -- Mostrar los atributos del producto: Imagen principal, titulo, medidas, cantidad, precio (solo de 1 cantidad)
+    - (8h) Componente "Detalles del carrito"
+        -- Mostrar los atributos del carrito: Numero de productos totales, subtotal (precio sin iva like 280€), Impuestos (15% junto con la cantidad de money like 42€), precio total (suma de subtotal + impuestos like 280€ + 42€ = 322€) 
+        -- Botón de checkout
+
+5) Checkout Page "Rellenar direccion de envío" (/shop/checkout/address)
+    - (8h) Componente "Formulario Direccion de envío"
+        -- Atributos del formulario: Nombre, Apellido, Dirección, Dirección 2 (Opcional), Código Postal, Ciudad, País, Teléfono
+        -- Botón de Revisar pedido
+
+6) Checkout Page "Revisar Pedido" (/shop/checkout/summary)
+    - (24h) Componente "Detalles del pedido"
+        -- (8h) Atributos: Los del componente de formulario de direccion de envio, y los del componente de carrito (incluido los productos)
+            ----- Listado de productos a la izquierda, Resumen de todo a la derecha (ordenador) / Listado de productos arriba y Resumen de todo abajo (Smartphone)
+        -- (16h) Botón de confirmar Pedido (Paypal) (se crea la order)
+
+7) Admin Dashboard Page (/admin/shop/dashboard)
+    - (8h) Componente "Atributos del dashboard del admin"
+        -- Listado de atributos: Pedidos totales, pedidos pagados, pedidos pendientes, Cantidad de productos, Cantidad de productos sin existencias, Cantidad de productos con existencias, Contador de actualización de la información.
+
+8) Admin Listado de productos Page (/admin/shop/products)
+    - Componente "Tabla con listado de productos y paginación y ordenación por campos"
+    - Botón para editar el producto (te lleva a la página de edición del producto)
+    - Botón para eliminar el producto
+    - Botón para crear nuevo producto (te lleva a la página de creación del producto)
+
+9) Admin Creación de nuevo producto Page (/admin/shop/products/new)
+    - Componente "Formulario creación de producto"
+        ---- Subir imágenes a Cloudinary
+    - Botón para guardar y si tiene éxito te lleva a la página del listado de productos
+            ---- añadir notificación de aviso de guardado con éxito (libro architecture)
+
+10) Admin Editar producto Page (/admin/shop/products/{slug_product})
+    - Componente "Formulario creación de productos pero con los datos rellenos del producto a editar"
+    - Botón para guardar y si tiene éxito te lleva a la página del listado de productos
+        ---- añadir notificación de aviso de guardado con éxito (libro architecture)
+
+11) Admin Listado de Pedidos Page (/admin/shop/orders)
+    - Componente "Tabla con todos los pedidos y sus atributos, con paginación y ordenación por campos"
