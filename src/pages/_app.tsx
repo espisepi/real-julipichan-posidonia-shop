@@ -3,6 +3,13 @@ import dynamic from 'next/dynamic'
 import Header from '@/config'
 import Layout from '@/components/dom/Layout'
 import '@/styles/index.css'
+import { Special_Elite } from 'next/font/google'
+
+
+const special_elite = Special_Elite({
+  weight: '400',
+  subsets: ['latin'],
+})
 
 const Scene = dynamic(() => import('@/components/canvas/Scene'), { ssr: true })
 
@@ -13,6 +20,11 @@ export default function App({ Component, pageProps = { title: 'index' } }) {
   const ref = useRef()
   return (
     <>
+      <style jsx global>{`
+        html {
+          font-family: ${special_elite.style.fontFamily};
+        }
+      `}</style>
       <Header title={pageProps.title} />
       {/**@ts-ignore */}
       <Layout ref={ref}>
