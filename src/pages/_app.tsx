@@ -6,6 +6,9 @@ import '@/styles/index.css'
 
 const Scene = dynamic(() => import('@/components/canvas/Scene'), { ssr: true })
 
+const SceneBackground = dynamic(() => import('@/components/canvas/background/SceneBackground'), { ssr: true })
+
+
 export default function App({ Component, pageProps = { title: 'index' } }) {
   const ref = useRef()
   return (
@@ -16,6 +19,7 @@ export default function App({ Component, pageProps = { title: 'index' } }) {
         <Component {...pageProps} />
 
         {/** TODO: CANVAS BACKGROUND */}
+        <SceneBackground />
         {/* <CanvasBackground /> */}
 
         {/** USAR ESTE CANVAS PARA MOSTRAR ELEMENTOS 3D FLOTANTES  POR ENCIMA DEL DOM Y SIN BACKGROUND CANVAS */}
