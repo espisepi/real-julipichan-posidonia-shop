@@ -12,6 +12,7 @@
     -- Desplegar el proyecto en vercel.
 
 0.0) Background commun para todas las paginas
+    + Poner en _app un nuevo componente <CanvasBackground /> y dejar el Canvas de r3f que estaba por defecto para mostrar elementos 3d por encima del dom
     - (8h) Titulo en 3D como background
     - (8h) tener el background (Ocean con imagen playa atardecer) del proyecto en 3D
 
