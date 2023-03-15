@@ -47,6 +47,7 @@ export default function Page(props) {
         <b>Alimento: </b> de una forma u otra la cerámica almenta, ya sea por su uso doméstico o por su habilidad de
         hacer crecer a uno mismo alimentado el alma.
       </h2>
+      <div style={{ height: '10vh' }}></div>
     </div>
   )
 }
