@@ -4,8 +4,23 @@
     height: 100vh;
 }
 
-.container-image {
+.container_image {
     display: flex;
     align-items: center;
     justify-content: center;
+
+    /* https://www.joshwcomeau.com/css/designing-shadows/ */
+    /* box-shadow: 3.6px 7.2px 7.2px hsl(0deg 0% 0% / 0.39); */
+}
+
+.floating_animation {
+    -webkit-animation: floating 5s linear infinite alternate-reverse;
+    animation: floating 5s linear infinite alternate-reverse;
+}
+
+@keyframes floating {
+  0%   {transform: perspective(500px) translate3d(0px, 0, 0px) rotate3d(0, 0, 1, 0deg);}
+  25%  {transform: perspective(500px) translate3d(0px, 0, -5px) rotate3d(0, 0, 1, 0deg); }
+  50%  {transform: perspective(500px) translate3d(0px, 0, 0px) rotate3d(0, 0, 1, 0deg)}
+  100% {transform: perspective(500px) translate3d(0px, 0, -5px) rotate3d(0, 0, 1, 0deg)}
 }
