@@ -2,13 +2,14 @@ import dynamic from 'next/dynamic'
 import Instructions from '@/components/dom/Instructions'
 import juliaPic from '@/public/julia.jpg';
 import Image from 'next/image'
+import styles from '@/styles/About.module.css';
 
 
 // Dom components go here
 export default function Page(props) {
   return (
-    <div style={{ padding: '50px', overflow: 'auto', height: '100vh' }}>
-      <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+    <div className={styles.main}>
+      <div className={styles['container-image']}>
         <Image
           src={juliaPic}
           alt='Picture of the author'

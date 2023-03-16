@@ -23,6 +23,9 @@
     - (2h) Footer
         - (2h) Icono instagram
 
+0.2) About Page:
+    - Pagina estatica con el contenido que quiera julia
+
 1) Home Page:
     - (Con Julia, 4h) Componente "Descripción de la web"
     - (8h) Componente "listado de productos con fotogrametria en 3D"
