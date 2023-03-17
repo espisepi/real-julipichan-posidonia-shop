@@ -3,6 +3,7 @@ import { useScroll, animated, useSpring } from '@react-spring/web'
 import juliaPic from '@/public/julia.jpg';
 import Image from 'next/image'
 import styles from '@/styles/About.module.css';
+import { PublicLayout } from '@/layouts/public-layout';
 
 
 // Dom components go here
@@ -33,7 +34,7 @@ export default function AboutPage(props) {
   const velocityAndPosition = 100;
 
   return (
-    <div ref={containerRef} className={styles.main}>
+    <PublicLayout ref={containerRef}>
       <div
         className={[styles.container_image, styles.floating_animation].join(' ')}>
         <Image
@@ -113,8 +114,7 @@ export default function AboutPage(props) {
         <b>Alimento: </b> de una forma u otra la cerámica almenta, ya sea por su uso doméstico o por su habilidad de
         hacer crecer a uno mismo alimentado el alma.
       </animated.h2>
-      <div style={{ height: '10vh' }}></div>
-    </div>
+    </PublicLayout>
   )
 }
 // Mirar el fontsize solamente para ver las de ordenador

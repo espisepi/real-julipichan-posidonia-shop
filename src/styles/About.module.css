@@ -1,8 +1,10 @@
+/*  Esta clase se encuentra en public-layout.module.css ya que pertenece al layout
 .main {
     padding: 50px;
     overflow: auto;
     height: 100vh;
 }
+*/
 
 .container_image {
     display: flex;
