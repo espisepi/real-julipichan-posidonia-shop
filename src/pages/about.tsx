@@ -4,6 +4,7 @@ import juliaPic from '@/public/julia.jpg';
 import Image from 'next/image'
 import styles from '@/styles/About.module.css';
 import { PublicLayout } from '@/layouts/public-layout';
+import { Footer } from '@/components/dom/footer/Footer';
 
 
 // Dom components go here
@@ -35,8 +36,7 @@ export default function AboutPage(props) {
 
   return (
     <PublicLayout ref={containerRef}>
-      <div
-        className={[styles.container_image, styles.floating_animation].join(' ')}>
+      <div className={[styles.container_image, styles.floating_animation].join(' ')}>
         <Image
           src={juliaPic}
           alt='Picture of the author'
@@ -114,6 +114,14 @@ export default function AboutPage(props) {
         <b>Alimento: </b> de una forma u otra la cerámica almenta, ya sea por su uso doméstico o por su habilidad de
         hacer crecer a uno mismo alimentado el alma.
       </animated.h2>
+      <animated.div
+        style={{
+          transform: scrollYProgress.to(
+            (scrollP) => `translateY(${velocityAndPosition - scrollP * velocityAndPosition}px)`,
+          ),
+        }}>
+          <Footer />
+      </animated.div>
     </PublicLayout>
   )
 }
