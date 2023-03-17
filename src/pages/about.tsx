@@ -47,6 +47,7 @@ export default function AboutPage(props) {
         />
       </div>
       <animated.h1
+        className={styles.floating_animation}
         style={{
           fontSize: '23px',
           textAlign: 'justify', // En ordenador 'center'
@@ -120,7 +121,7 @@ export default function AboutPage(props) {
             (scrollP) => `translateY(${velocityAndPosition - scrollP * velocityAndPosition}px)`,
           ),
         }}>
-          <Footer />
+        <Footer />
       </animated.div>
     </PublicLayout>
   )
