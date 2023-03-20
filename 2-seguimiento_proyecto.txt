@@ -3,7 +3,9 @@
 ========= ERRORES APRENDIDOS ======================
 - configurar previamente el proyecto con react-query y axios (lib/api-client.ts, lib/react-query.ts) añadiendo el provider y una peticion con la api (hello world por ejemplo)
 
-1) Primero poner toda la funcionalidad de la pagina y todos los datos a pelo.
+1) Primero poner toda la funcionalidad de las paginas (pages) y poner todos los datos a pelo sin ser bonito visualmente.
+    1.1) Ponerlo con datos falsos que devuelve la api del servidor (creo los datos a pelo)
+    1.2) Conectar la api del servidor con la base de datos y devolver los datos reales 
 2) Despues ponerlo bonito con el cliente al lado diciendo como quiere las cosas que se vean.
 
 
@@ -25,9 +27,14 @@ Shop Page -> useProducts (feature/shop/products/api) (React-Query)
 
 
 - 20/03/23
-    - Creamos la carpeta api, components, pages y types para mostrar el listado de productos en la pagina de shopPage. (API endpoint devuelve datos falsos)
+    ==== SHOP PAGE ===============
+    - Creamos Shop Page, la carpeta api, components, pages y types para mostrar el listado de productos en la pagina de shopPage. (API endpoint devuelve datos falsos)
         -- 1) Se crea el archivo type con la respuesta del servidor: 
         -- 2) Se crea el archivo api con la llamada a la api para que me devuelva la respuesta del servidor (axios y hook react-query)
             2.1) Si se inserta react-query por primera vez, recordar añadir el QueryClientProvider en app.tsx
         -- 3) Se añade el componente que renderiza (pinta) la respuesta del hook a la page deseada
         -- 4) Se utiliza el hook creado anteriormente en la page deseada y se añade la respuesta del hook como atributos props al componente deseado.
+    - NO se ponen bonitos los datos, simplemente se muestran en pantalla para comprobar que funciona todo bien.
+    - TODO: Pasar esos datos falsos a datos reales de la base de datos.
+    - TODO: Poner los datos bonitos visualmente.
+    ==== FIN SHOP PAGE ===============
