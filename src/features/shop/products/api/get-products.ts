@@ -30,16 +30,17 @@ export const useProducts = ({ params }: GetProductsOptions) => {
         initialData: [],
     });
 
-    let dataGood = data;
-    //@ts-ignore
-    if(dataGood && dataGood?.data) {
-        //@ts-ignore
-        dataGood = dataGood.data;
-    }
+    // Ya no hace falta porque obtengo el goodData en el interceptor de axios definido en import { apiClient } from '@/lib/api-client';
+    // let dataGood = data;
+    // //@ts-ignore
+    // if(dataGood && dataGood?.data) {
+    //     //@ts-ignore
+    //     dataGood = dataGood.data;
+    // }
 
     return {
         ...dataUseQuery,
-        data: dataGood,
+        data: data,
         isLoading: isFetching && isFetched,
     };
 };
