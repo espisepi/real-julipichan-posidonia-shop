@@ -26,6 +26,8 @@
 0.2) About Page:
     - Pagina estatica con el contenido que quiera julia
 
+0.3) Consuming API Application -> Axios y React-Query
+
 1) Home Page:
     - (Con Julia, 4h) Componente "Descripción de la web"
     - (8h) Componente "listado de productos con fotogrametria en 3D"
@@ -33,13 +35,16 @@
 
 2) Shop Page (/shop):
     - (8h) Componente "Filtrar productos por tags y mostrar las tags de filtrado"
+        -- (API CONSUMING) GET shop/products?tag=portavelas RETURN List<ProductResponse>
     - (24h) Componente "Mostrar productos 1 a 1 con presentación estilo 3d like Mosha en 3D"
     - (8h) Componente "Listado de productos en card"
+        -- (API CONSUMING) GET shop/products RETURN List<ProductResponse>
 
 3) Product Details Page (/shop/product/{slug_product})
     - (4h) Componente  "Modelo 3D orbitcontrols en 3D"
     - (16h) Componente "Carrusel fotos"
     - (8h) Atributos del producto: Precio, Medidas, Descripción, fotos -Array<String> con url- (en carrusel de fotos), modelo 3d -String con url- (en componente Modelo 3D OrbitControls)
+        -- (API CONSUMING) GET shop/product/{slug_product} RETURN ProductResponse
     - (4h) Botón añadir al carrito y botón comprar y botón añadir cantidad y quitar cantidad.
 
 4) Cart Page (/shop/cart)
