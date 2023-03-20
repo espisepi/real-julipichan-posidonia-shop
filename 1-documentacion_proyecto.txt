@@ -27,6 +27,8 @@
     - Pagina estatica con el contenido que quiera julia
 
 0.3) Consuming API Application -> Axios y React-Query
+    - Creamos el archivo api con la llamada al api endpoint y el hook de react-query
+    - Lo utilizamos en nuestro componente
 
 1) Home Page:
     - (Con Julia, 4h) Componente "Descripción de la web"

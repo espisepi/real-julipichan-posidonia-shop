@@ -1,5 +1,33 @@
 
 
+========= ERRORES APRENDIDOS ======================
+- configurar previamente el proyecto con react-query y axios (lib/api-client.ts, lib/react-query.ts) añadiendo el provider y una peticion con la api (hello world por ejemplo)
+
+1) Primero poner toda la funcionalidad de la pagina y todos los datos a pelo.
+2) Despues ponerlo bonito con el cliente al lado diciendo como quiere las cosas que se vean.
+
+
+========= PROBLEMAS ENCONTRADOS ===========
+
+1) No se realiza fetch de los datos con el hook de react-query cuando se monta el componente
+1 solucion): llamar a la funcion refetch que devuelve useQuery (se llama dentro de useEffect de la page, ej: shop page)
+
+======= Arquitectura =========
+
+1) Mostrar productos
+Shop Page -> useProducts (feature/shop/products/api) (React-Query)
+
+
+
+
 - 13/03/23
     - (2h) Realizar documento "1-documentacion_proyecto.txt" poniéndo todas las tareas a realizar.
 
+
+- 20/03/23
+    - Creamos la carpeta api, components, pages y types para mostrar el listado de productos en la pagina de shopPage. (API endpoint devuelve datos falsos)
+        -- 1) Se crea el archivo type con la respuesta del servidor: 
+        -- 2) Se crea el archivo api con la llamada a la api para que me devuelva la respuesta del servidor (axios y hook react-query)
+            2.1) Si se inserta react-query por primera vez, recordar añadir el QueryClientProvider en app.tsx
+        -- 3) Se añade el componente que renderiza (pinta) la respuesta del hook a la page deseada
+        -- 4) Se utiliza el hook creado anteriormente en la page deseada y se añade la respuesta del hook como atributos props al componente deseado.
