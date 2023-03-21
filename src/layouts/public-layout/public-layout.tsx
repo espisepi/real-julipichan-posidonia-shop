@@ -19,3 +19,6 @@ export const PublicLayout = forwardRef<Ref, PublicLayoutProps>( ({ children }: P
     </div>
   )
 });
+
+PublicLayout.displayName = 'PublicLayout'
+

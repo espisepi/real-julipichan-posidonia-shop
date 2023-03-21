@@ -28,3 +28,6 @@ export const Footer = forwardRef<Ref, FooterProps> ( ({style}: FooterProps, ref)
       </div>
     )
 });
+
+Footer.displayName = 'Footer'
+

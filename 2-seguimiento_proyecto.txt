@@ -20,6 +20,11 @@
 3) Hydration failed because the initial UI does not match what was rendered on the server.
 3 Solucion) El error es porque obtengo el carrito por cookie, y eso no funciona en el servidor, por eso me dice que lo que renderiza el servidor es distinto que lo que renderiza el cliente.
 
+4) Error: Component definition is missing display name  react/display-name
+4 Solucion) El error es debido a que para utilizar forwardRef hay que añadir el codigo siguiente en el componente en donde se utilice: 
+añadir al final del codigo -> Footer.displayName = 'Footer'
+Siendo Footer el nombre del componente que este fallando (en este proyecto esta escrito en el Footer para solucionar el error)
+
 
 ======= Arquitectura =========
 
