@@ -14,7 +14,7 @@ export const productResponseToCartProductConverter = ({ product } : ProductRespo
         title: product.title,
         slug: product.slug,
         price: product.price,
-        quantity: 0,
+        quantity: 1,
         id: product.id,
         createdAt: Date.now(),
         updatedAt: Date.now(),

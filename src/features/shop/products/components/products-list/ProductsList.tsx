@@ -1,6 +1,8 @@
 import { ICartProduct } from "@/features/shop/cart/types";
 import { ProductResponse } from "../../types"
 import { productResponseToCartProductConverter } from "@/converters/productResponseToCartProductConverter";
+import { useContext } from "react";
+import { CartContext } from "@/features/shop/cart";
 
 
 export type ProductsListProps = {
@@ -15,6 +17,8 @@ export const ProductsList = ({
     tag
   }: ProductsListProps ) => {
 
+    const { addProductToCart } = useContext(CartContext);
+
     if(isLoading) return <h1>IS LOADING</h1>;
 
     return (
@@ -26,7 +30,7 @@ export const ProductsList = ({
                 <h2>{product.title}</h2>
                 <h2>{product.description}</h2>
                 <h2>Price: {product.price}</h2>
-                <button onClick={(e)=>console.log("click")/*addProductToCart(productResponseToCartProductConverter({product}))*/}> Agregar al carrito </button>
+                <button onClick={(e)=>addProductToCart(productResponseToCartProductConverter({product}))}> Agregar al carrito </button>
               </div>
             ))
           : null}
