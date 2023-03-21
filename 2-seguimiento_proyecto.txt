@@ -1,5 +1,10 @@
 
 
+========== PASOS A SEGUIR ==============
+
+1) Crear los componentes y stores de toda la aplicacion y mostrarlos en una pagina para mostrar que funciona todo correctamente.
+2) Poner los componentes en sus respectivas pages.
+
 ========= ERRORES APRENDIDOS ======================
 - configurar previamente el proyecto con react-query y axios (lib/api-client.ts, lib/react-query.ts) añadiendo el provider y una peticion con la api (hello world por ejemplo)
 - configurar previamente el proyecto con zustand, react context o el manejador de estados que se utilice.
@@ -64,3 +69,6 @@ Shop Page -> useProducts (feature/shop/products/api) (React-Query)
     DEJAMOS DE UTIIZAR ZUSTAND!
 
     Usamos redux y context: https://www.delasign.com/blog/ts-react-redux-guide-2022/
+
+    Usamos el context del proyecto teslo-shop de udemy xD
+

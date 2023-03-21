@@ -1,4 +1,4 @@
-import { useProducts } from "@/features/shop";
+import { CartProductList, useProducts } from "@/features/shop";
 import { ProductsList } from "@/features/shop/products/components/products-list";
 import { useEffect } from "react";
 
@@ -27,6 +27,7 @@ export default function ShopPage() {
       <div id='shop-page'>
         <h1>SHOP PAGE</h1>
         <ProductsList products={products.data} isLoading={products.isLoading} tag={tag} />
+        <CartProductList />
       </div>
     )
 }
