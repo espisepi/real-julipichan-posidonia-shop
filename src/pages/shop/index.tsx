@@ -19,7 +19,9 @@ export default function ShopPage() {
             // Ejecutamos la peticion al api endpoint con react-query
             products.refetch();
         }
-    },[])
+    },[]);
+
+    // const { addProductToCart } = useCartStore;
 
     return (
       <div id='shop-page'>

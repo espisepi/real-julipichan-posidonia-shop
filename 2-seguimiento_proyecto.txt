@@ -17,6 +17,10 @@
 2) No se Muestran los datos de axios porque lo que devuelve es la respuesta de axios y no la data
 2 Solucion) Falta incluir un interceptor al atributo de axios que devuelva la respuesta json.
 
+3) Hydration failed because the initial UI does not match what was rendered on the server.
+3 Solucion) El error es porque obtengo el carrito por cookie, y eso no funciona en el servidor, por eso me dice que lo que renderiza el servidor es distinto que lo que renderiza el cliente.
+
+
 ======= Arquitectura =========
 
 1) Mostrar productos
@@ -48,4 +52,10 @@ Shop Page -> useProducts (feature/shop/products/api) (React-Query)
     - Zustand VS React Context (https://medium.com/@viraj.vimu/react-context-api-vs-zustand-state-manager-98ca9ac76904)
     - Usamos zustand porque tiene mejor performance, ya que con react context se re-renderiza todos los componentes que se encuentran dentro del provider
 
-    - Creamos la store del carrito con zustand
+    1) Creamos la store del carrito con zustand
+    2) Usamos la store en shop page y cart page para pasar a los componentes sus atributos y metodos necesarios para manipular el carrito
+    3) Usamos en los componentes los atributos y metodos proporcionados por la store (se lo pasamos mediante parámetros props)
+
+    DEJAMOS DE UTIIZAR ZUSTAND!
+
+    Usamos redux y context: https://www.delasign.com/blog/ts-react-redux-guide-2022/

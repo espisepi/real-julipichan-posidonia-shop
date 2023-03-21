@@ -1,4 +1,6 @@
+import { ICartProduct } from "@/features/shop/cart/types";
 import { ProductResponse } from "../../types"
+import { productResponseToCartProductConverter } from "@/converters/productResponseToCartProductConverter";
 
 
 export type ProductsListProps = {
@@ -11,7 +13,7 @@ export const ProductsList = ({
     products,
     isLoading,
     tag
-}: ProductsListProps ) => {
+  }: ProductsListProps ) => {
 
     if(isLoading) return <h1>IS LOADING</h1>;
 
@@ -24,7 +26,7 @@ export const ProductsList = ({
                 <h2>{product.title}</h2>
                 <h2>{product.description}</h2>
                 <h2>Price: {product.price}</h2>
-                <br></br>
+                <button onClick={(e)=>console.log("click")/*addProductToCart(productResponseToCartProductConverter({product}))*/}> Agregar al carrito </button>
               </div>
             ))
           : null}
