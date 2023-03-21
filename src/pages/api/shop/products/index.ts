@@ -1,6 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 
 import { ProductResponse } from '@/features/shop';
+import { initialData } from '@/backend';
 
 type DataResponse = 
 | { message: string }
@@ -33,27 +34,9 @@ const getProducts = async(req: NextApiRequest, res: NextApiResponse<DataResponse
     //                             .lean();
     // await db.disconnect();
 
-    const products = productsDataFalse;
+    const products = initialData.products;
 
     return res.status(200).json( products );
 
 
 }
-
-
-
-const productsDataFalse: ProductResponse[] = [
-    {
-        title: 'title product test 1',
-        description: 'description product test 1',
-        slug: 'slug-product-test-1',
-        tags: ['tag1','tag2'],
-        price: 20,
-        inStock: 1,
-        images: ['img1','img2'],
-        scene: 'urlscene',
-        id: '345345345231',
-        createdAt: 1,
-        updatedAt: 2,
-    }
-];
