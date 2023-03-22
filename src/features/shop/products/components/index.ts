@@ -1,3 +1,3 @@
 
 
-export {};
+export * from './products-list';

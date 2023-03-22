@@ -1,5 +1,5 @@
 import { CartProductList, useProducts } from "@/features/shop";
-import { ProductsList } from "@/features/shop/products/components/products-list";
+import { ProductsList } from "@/features/shop";
 import { useEffect } from "react";
 
 
