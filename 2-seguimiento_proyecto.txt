@@ -3,6 +3,7 @@
 ========== PASOS A SEGUIR ==============
 
 1) Crear los componentes y stores de toda la aplicacion y mostrarlos en una pagina para mostrar que funciona todo correctamente.
+    1.1) Simular como la aplicacion ecom storefront de Accenture pero mostrando los componentes con sus estilos flama y tener toda la funcionalidad de la pagina de un simple vistazo.
 2) Poner los componentes en sus respectivas pages.
 
 ========= ERRORES APRENDIDOS ======================
