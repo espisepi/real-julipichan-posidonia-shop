@@ -3,7 +3,7 @@ import { ProductResponse } from '../../types'
 import { productResponseToCartProductConverter } from '@/converters/productResponseToCartProductConverter'
 import { useContext, useEffect } from 'react'
 import { CartContext } from '@/features/shop/cart'
-import { useProducts } from '../../api'
+import { useProducts } from '../../hooks'
 
 export type ProductsListProps = {
   tag: string
