@@ -5,7 +5,7 @@ import { useEffect, useRef, useState } from 'react';
 
 
 
-export const InputText = ({ labelText, registerUseForm, errors }) => {
+export const InputText = ({ labelText, registerUseForm, error, helperText }) => {
 
     const [isFocus, setIsFocus] = useState(false);
 
@@ -31,7 +31,7 @@ export const InputText = ({ labelText, registerUseForm, errors }) => {
     return (
       <div
         onBlur={(e) => handleBlur(e)}
-        id={`div-input-text-${uid()}`}
+        id={`div-input-text-${labelText}`}
         className={styles.product_create_form_div_input_text}>
         <label
           className={
@@ -41,7 +41,7 @@ export const InputText = ({ labelText, registerUseForm, errors }) => {
         </label>
         <input type="text" ref={inputRef} onFocus={(e) => handleFocus(e)} className={styles.product_create_form_input_text} {...registerUseForm} />
         {/* errors will return when field validation fails  */}
-        {errors.title && <span style={{color:'red'}}>{errors.title.message}</span>}
+        {error && <span style={{color:'red'}}>{helperText}</span>}
       </div>
     )
 }

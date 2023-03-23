@@ -33,7 +33,17 @@ export const ProductCreateForm = () => {
               required: 'Este campo es requerido',
               minLength: { value: 2, message: 'Minimo 2 caracteres' },
             })}
-            errors={errors}
+            error={!!errors.title}
+            helperText={errors.title?.message}
+          />
+
+          <InputText
+            labelText={'description'}
+            registerUseForm={register('description', {
+              required: 'Este campo es requerido',
+            })}
+            error={!!errors.description}
+            helperText={errors.description?.message}
           />
         </form>
       </div>
