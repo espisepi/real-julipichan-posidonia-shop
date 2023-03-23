@@ -76,7 +76,7 @@ export const ProductCreateForm = () => {
             helperText={errors.price?.message}
           />
 
-          <InputImage labelText={'upload image'} />
+          <InputImage labelText={'upload image'} setValue={setValue} getValues={getValues} />
         </form>
       </div>
     )
