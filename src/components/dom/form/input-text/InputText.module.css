@@ -13,7 +13,7 @@
 .product_create_form_input_text_label {
     /* Para evitar el comportamiento por defecto al pulsar el label */
     pointer-events: none;
-    position: absolute;
+    /*position: absolute;*/
     /*padding: 10px;*/
 
     transition: padding 0.5s;
@@ -22,7 +22,7 @@
 .product_create_form_input_text_label__focus {
     /* Para evitar el comportamiento por defecto al pulsar el label */
     pointer-events: none;
-    position: absolute;
+    /*position: absolute;*/
     padding: 0px;
 
     transition: padding 0.5s;

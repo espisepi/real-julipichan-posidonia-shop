@@ -19,6 +19,14 @@ export const ProductCreateForm = () => {
         watch,
     } = useProductCreateForm({});
 
+    // slug: string;
+    // tags: string[]; // Hacerlo PK con la tabla de tags
+    // price: number;
+    // inStock: number;
+    // images: string[];
+    // scene: string; // URL to model 3D Scene to load with gltfLoader threejs
+
+
 
     
 
@@ -44,6 +52,27 @@ export const ProductCreateForm = () => {
             })}
             error={!!errors.description}
             helperText={errors.description?.message}
+          />
+
+          <InputText
+            labelText={'Slug - URL'}
+            registerUseForm={register('slug', {
+              required: 'Este campo es requerido',
+              validate: (val) => (val.trim().includes(' ') ? 'No puede tener espacios en blanco' : undefined),
+            })}
+            error={!!errors.slug}
+            helperText={errors.slug?.message}
+          />
+
+          <InputText
+            type='number'
+            labelText={'Price'}
+            registerUseForm={register('price', {
+              required: 'Este campo es requerido',
+              min: { value: 0, message: 'Mínimo de valor cero' },
+            })}
+            error={!!errors.price}
+            helperText={errors.price?.message}
           />
         </form>
       </div>
