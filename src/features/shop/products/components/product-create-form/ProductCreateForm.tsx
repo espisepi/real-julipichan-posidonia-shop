@@ -3,6 +3,7 @@ import { useProductCreateForm } from "../../hooks";
 
 import styles from './ProductCreateForm.module.css';
 import { InputText } from "@/components/dom";
+import { InputImage } from "@/components/dom/form/input-image";
 
 
 
@@ -74,6 +75,8 @@ export const ProductCreateForm = () => {
             error={!!errors.price}
             helperText={errors.price?.message}
           />
+
+          <InputImage labelText={'upload image'} />
         </form>
       </div>
     )
