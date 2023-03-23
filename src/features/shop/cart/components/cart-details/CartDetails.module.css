@@ -1,0 +1,29 @@
+
+/* Estilos mobile-first (para smartphone) */
+
+.cart_details_component {
+    display: flex;
+    flex-flow: column;
+    background-color: black;
+    border-radius: 25px;
+    padding: 20px;
+}
+
+.cart_details_title {
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #62CDFF;
+}
+
+.cart_details_row {
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+}
+
+/* Estilos para pantallas mas grandes */
+@media (min-width: 550px) {
+    .cart_details_component {
+        width: 450px;
+    }
+}

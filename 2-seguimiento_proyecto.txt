@@ -9,11 +9,19 @@
 ========= ERRORES APRENDIDOS ======================
 - configurar previamente el proyecto con react-query y axios (lib/api-client.ts, lib/react-query.ts) añadiendo el provider y una peticion con la api (hello world por ejemplo)
 - configurar previamente el proyecto con zustand, react context o el manejador de estados que se utilice.
+- Los estilos css seran mobile-first y despues para pantallas mas grandes como la del ordenador se usara @media screen
 1) Primero poner toda la funcionalidad de las paginas (pages) y poner todos los datos a pelo sin ser bonito visualmente.
     1.1) Ponerlo con datos falsos que devuelve la api del servidor (creo los datos a pelo)
     1.2) Conectar la api del servidor con la base de datos y devolver los datos reales 
 2) Despues ponerlo bonito con el cliente al lado diciendo como quiere las cosas que se vean.
 
+
+======== ESTILOS CSS =================
+
+xs (for phones - screens less than 768px wide)
+sm (for tablets - screens equal to or greater than 768px wide)
+md (for small laptops - screens equal to or greater than 992px wide)
+lg (for laptops and desktops - screens equal to or greater than 1200px wide)
 
 ========= PROBLEMAS ENCONTRADOS ===========
 
