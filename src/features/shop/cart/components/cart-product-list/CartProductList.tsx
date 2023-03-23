@@ -1,5 +1,4 @@
 import { Suspense, useContext } from "react";
-import { ICart, ICartProduct } from "../../types";
 import { CartContext } from "../../context";
 
 
@@ -15,8 +14,6 @@ export const CartProductList = ( {  }: CartProductListProps ) => {
 
     return (
       <>
-          <h1>OYe</h1>
-          {/* <div id='componente-listado-productos-carrito'></div> */}
           <div id='componente-listado-productos-carrito'>
             {products &&
               products.map((product, i) => (

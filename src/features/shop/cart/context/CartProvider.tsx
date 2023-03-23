@@ -9,6 +9,7 @@ import { ICartProduct} from '../types';
 import { IOrder, IShippingAddress } from '@/features/shop';
 
 import { createOrder as createOrderApi } from '@/features/shop';
+import { TAX_RATE } from '@/constants';
 
 export interface CartState {
     isLoaded: boolean;
@@ -88,13 +89,20 @@ export const CartProvider:FC<Props> = ({ children }) => {
         
         const numberOfItems = state.cart.reduce( ( prev, current ) => current.quantity + prev , 0 );
         const subTotal = state.cart.reduce( ( prev, current ) => (current.price * current.quantity) + prev, 0 );
-        const taxRate =  Number(process.env.NEXT_PUBLIC_TAX_RATE || 0);
+        const taxRate =  TAX_RATE;
+        const tax = subTotal * taxRate;
+        const total = subTotal * (taxRate + 1);
+
+        // Poner los numeros con dos decimales como maximo: .toFixed(2)
+        const subTotalFixed = Number(subTotal.toFixed(2));
+        const taxFixed = Number(tax.toFixed(2));
+        const totalFixed = Number(total.toFixed(2));
     
         const orderSummary = {
-            numberOfItems,
-            subTotal,
-            tax: subTotal * taxRate,
-            total: subTotal * ( taxRate + 1 )
+          numberOfItems,
+          subTotal: subTotalFixed,
+          tax: taxFixed,
+          total: totalFixed,
         }
 
         dispatch({ type: '[Cart] - Update order summary', payload: orderSummary });
