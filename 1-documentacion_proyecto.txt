@@ -1,6 +1,12 @@
 =========== Listado de tareas del proyecto (paginas y componentes) ===============
 
 
+-  Tecnologias a utilizar:
+    -- React con NextJS
+    -- axios y react-query para peticiones a las APIS
+    -- react-hook-form para manejo de formularios
+    -- React context para estados globales como el carrito de compra y autenticacion
+
 - Previo:
     -- Crear proyecto con plantilla react-three-next
     ++ yarn create r3f-app next real-julipichan-posidonia-shop -ts
