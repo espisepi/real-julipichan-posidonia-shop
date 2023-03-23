@@ -16,7 +16,6 @@ export default function ShopPage() {
       <div id='shop-page'>
         <h1>SHOP PAGE</h1>
         <ProductsList tag={tag} />
-        <CartProductList />
       </div>
     )
 }
