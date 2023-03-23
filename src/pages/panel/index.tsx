@@ -1,4 +1,4 @@
-import { CartDetails, CartProductList, ProductsList } from "@/features/shop";
+import { CartDetails, CartProductList, ProductCreateForm, ProductsList } from "@/features/shop";
 import { PublicLayout } from "@/layouts/public-layout";
 
 
@@ -14,6 +14,10 @@ export default function PanelPage( ) {
           <ProductsList tag={tag} />
           <CartProductList />
           <CartDetails />
+          <div>
+           <p>Formulario para crear Producto</p>
+           <ProductCreateForm />
+          </div>
         </div>
       </PublicLayout>
     )
