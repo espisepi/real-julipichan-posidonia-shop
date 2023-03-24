@@ -7,6 +7,8 @@
     -- react-hook-form para manejo de formularios
     -- React context para estados globales como el carrito de compra y autenticacion
     -- Next-auth para el manejo de autenticacion de usuarios
+
+    -- amazon amplify y amazon s3 como backend (antes era mongo cloud para base de datos, cloudinary para subida imagenes y next auth para autenticacion)
     
 - Previo:
     -- Crear proyecto con plantilla react-three-next
@@ -17,6 +19,106 @@
     -- Cambiar todas las extensiones jsx por tsx y realizar commit
     -- comprobar que funcionan todos los comandos definidos en package.json (yarn start, dev, build...)
     -- Desplegar el proyecto en vercel.
+
+- Pasos a seguir:
+    0- Crear pagina /panel y escribir ahí un componente inicial para empezar el desarrollo de los siguientes pasos
+    1- Implementar Servicios con API REST (Si se puede, hacer tests para comprobar que los servicios funcionan)
+    2- Implementar los hooks necesarios para consumir esos servicios
+    3- Implementar los estados globales con Context, Redux, Zustand, etc.
+    4- Implementar los hooks necesarios para consumir esos estados globales
+    5- Implementar los componentes y paginas sin echar cuenta de que se vean bonitos
+    6- Implementar los estilos (que se vea bonita la web)
+
+
+- Estructura de carpetas del proyecto (en verdad este paso es super importante): (src/)
+
+    - /services (En esta carpeta ponemos lo que antes poniamos en cada carpeta de /api
+                    , lo vamos a poner ahora de esta manera para tener controlado en un
+                        solo lugar las llamadas a las APIS, por si ocurriese cualquier
+                        fallo relacionado con alguna llamada a la API, acceder directamente
+                        a esta carpeta para solucionar el end point que falla)
+
+                (Todos los servicios obtendran de la llamada a la api un I...Response y devolveran el tipo de dato I...Data (gracias a los convertidores), ya que estos servicios lo consumiran mis componentes y hooks y solo tratan con los datos de tipo ...Data )
+                
+                    ========================== ProductService =================================
+                    |                                                                         |
+    Api da los datos -> IProductResponse ---converter----> IProductData  -> return IProductData --------->   (Esto lo consumen hooks, componentes, pages y lo que me de la gana. Al final los services son funciones javascript normales y corrientes)
+                    |                                                                         |
+                    ========================== ProductService =================================                                                                                                            
+
+        -- /shop
+            --- /product
+                ---- Product.Service.ts (axios, mismo codigo que teniamos en )
+                (Devolvemos los productos de tipo IProductData o I<cualquier_nombre>Data )
+                    { metodos: getProducts, createProduct, updateProduct, deleteProduct... (todos los relacionados con product) }
+                ---- .index.ts
+        ...
+    - /converters
+        --/product-converters
+            {
+                tipos de products (types)
+                IProductData: Los datos del producto que manejo en mi aplicacion (en mis estados locales y globales de mis componentes)
+                IProductRespones: Los datos del producto
+            }
+            productResponseToProductData.ts (IProductData )
+        ...
+
+
+    (Estructura final de carpetas jeje)
+
+    - /api
+        constants.api.ts (variables constantes que guardan un string con las localizaciones de las apis)
+        Ejemplo {
+            export const API_ENDPOINT_AMAZON: string = process.env.API_ENDPOINT_AMAZON || "https://amazon.basededatos.api.get.enlace.inventado/";
+            export const API_ENDPOINT_AMAZON_GET_PRODUCTS: string = `${API_ENDPOINT_AMAZON}/mycustombd/products`;
+            ...
+        }
+        -- /services
+            --- /shop-services
+                ---- /product-services
+                    ----- ProductService.ts (clase estatica con todas las llamadas relacionadas con Products (Poner export de cada funcion de llamada con axios y despues hacer un "export * as ProductService from '') )
+                    ----- /create-product
+                    ----- /update-product
+        -- /converters
+
+    - /components (para componentes globales)
+    - /stores (para manipular estados globales)
+        --/auth-store
+            ---/context
+                ---- Todos los archivos que tienen que ver con el context
+            ---/zustand
+                ---- Todos los archivos que tienen que ver con zustand
+        --/notification-store
+            ---/context
+            ---/zustand
+        --/shop
+
+        
+        --- context
+        -- zustand
+
+    - /features
+        -- /shop
+            --- /stores
+                ----/cart-store
+            --- /products
+                ---- /components
+                ---- /
+
+
+    (Estructura final de carpetas jeje x2 )
+    
+    - carpetas globales de todo tipo que se utilice en toda la aplicacion(api, components, hooks...)
+        -- features
+            --- shop (anyFeature)
+                ----    products (anyCharacteristicOfAnyFeature)
+                    ----- carpetas de todo tipo que se relacionen con el concepto de products en nuestra aplicacion (api, components, hooks... )
+
+
+
+
+
+
 
 0.0) Background commun para todas las paginas
     + Poner en _app un nuevo componente <CanvasBackground /> y dejar el Canvas de r3f que estaba por defecto para mostrar elementos 3d por encima del dom
