@@ -6,7 +6,18 @@ type useCreateProductFormProps = {
   product?: ICreateProductFormData
 }
 
-export const useProductCreateForm = ({ product = undefined }) => {
+const product_default = {
+    title: "",
+    description: "",
+    slug: "",
+    tags: [],
+    price: 0,
+    inStock: 0,
+    images: [],
+    scene: ""
+}
+
+export const useProductCreateForm = ({ product = product_default }) => {
     const { 
         register,
         handleSubmit,

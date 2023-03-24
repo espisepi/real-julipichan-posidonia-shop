@@ -40,6 +40,41 @@ añadir al final del codigo -> Footer.displayName = 'Footer'
 Siendo Footer el nombre del componente que este fallando (en este proyecto esta escrito en el Footer para solucionar el error)
 
 
+5) En el formulario al crear producto no me coge el atributo getValues('images') ya que no le tengo hecho un "...register" con react-hook-form
+5 Solucion) Inicializo un nuevo producto con valores por defecto (strings vacios y arrays vacios pero instanciados) y lo inserto de la siguiente manera:
+  const { register, handleSubmit, formState:{ errors }, getValues, setValue, watch } = useForm<FormData>({
+        defaultValues: product
+    })
+Siendo producto el objeto instanciado pero vacio. Quedaria entonces asi el codigo:
+
+const product_default = {
+    title: "",
+    description: "",
+    slug: "",
+    tags: [],
+    price: 0,
+    inStock: 0,
+    images: [],
+    scene: ""
+}
+
+export const useProductCreateForm = ({ product = product_default }) => {
+    const { 
+        register,
+        handleSubmit,
+        formState: { errors },
+        getValues,
+        setValue,
+        watch,
+     } = useForm<ICreateProductFormData>({
+        defaultValues: product,  // Aqui antes tenia undefined, por eso no me encontraba el atributo getValues('images')
+     });
+....
+
+
+
+
+
 ======= Arquitectura =========
 
 1) Mostrar productos

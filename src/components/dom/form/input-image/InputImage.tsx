@@ -37,6 +37,14 @@ export const InputImage = ({ labelText, setValue, getValues }) => {
       }
     }
 
+    const onDeleteImage = (image: string) => {
+      setValue(
+        'images',
+        getValues('images').filter((img) => img !== image),
+        { shouldValidate: true },
+      )
+    }
+
     return (
       <div id={`input-image-${labelText}`}>
         <label>{labelText}</label>
@@ -49,6 +57,21 @@ export const InputImage = ({ labelText, setValue, getValues }) => {
           style={{ display: 'none' }}
           onChange={onFilesSelected}
         />
+
+        {/* <Chip
+          label='Es necesario al 2 imagenes'
+          color='error'
+          variant='outlined'
+          sx={{ display: getValues('images').length < 2 ? 'flex' : 'none' }}
+        /> */}
+
+        {getValues('images').map((img) => (
+          <div key={img}>
+            <h1>IMAGEEEEN</h1>
+            <img src={img}></img>
+            <button onClick={() => onDeleteImage(img)}>Borrar</button>
+          </div>
+        ))}
       </div>
     )
 }
