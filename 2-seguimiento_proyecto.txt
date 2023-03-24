@@ -81,3 +81,8 @@ Shop Page -> useProducts (feature/shop/products/api) (React-Query)
 
     Usamos el context del proyecto teslo-shop de udemy xD
 
+
+
+- 24/03/23
+    - Objetivos:
+        -- Subir imagen a cloudinary y mostrarla en el formulario de creacion de producto  
