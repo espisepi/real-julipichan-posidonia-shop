@@ -29,3 +29,28 @@
         - añadimos git al proyecto y lo subimos a github (ya lo hicimos)
         - añadimos amplify hosting al proyecto:
             -- amplify init (dentro de la carpeta del proyecto)
+                --- Tenemos que configurar un profile (https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-profiles.html)
+                    ========= NO HA FUNCIONADO ==========================
+                    ---- Nos vamos a ~/.aws/credentials y metemos lo siguiente:
+                    [default]
+                    aws_access_key_id=AKIAWDIQE4XGH4V74XNQ
+                    aws_secret_access_key=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
+                    ---- Nos vamos a ~/.aws/profile (he tenido que crear el archivo) y metemos lo siguiente:
+                    [default]
+                    output = json
+                    region = eu-north-1
+                    ---- No ha funcionado, no aparece ningun profile para elegir en consola, seguimos probando
+                    ========= FIN NO HA FUNCIONADO ==========================
+                    ========= SI HA FUNCIONADO ==============================
+                    ---- Instalamos aws cli (https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html)
+                    ---- Ejecutamos: aws configure (https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-quickstart.html)
+                    ---- Por fin ya nos aparece el profile al ejecutar el comando "amplify init" dentro del proyecto!:)
+            -- amplify add hosting (añadimos un hosting)
+                --- Las opciones a seleccionar son:
+                    ---- (Managed hosting with custom domains, Continuous deployment)
+                    ---- Continuous deployment (Git-based deployments)
+
+
+
+
+            
