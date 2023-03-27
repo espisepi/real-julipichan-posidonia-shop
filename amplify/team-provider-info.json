@@ -10,6 +10,11 @@
       "StackName": "amplify-julipichanposidonia-dev-124328",
       "StackId": "arn:aws:cloudformation:eu-north-1:419330057676:stack/amplify-julipichanposidonia-dev-124328/3698e170-cc8c-11ed-8ada-0e3730e5f624",
       "AmplifyAppId": "dlacria2b5kh7"
+    },
+    "categories": {
+      "auth": {
+        "julipichanposidonia": {}
+      }
     }
   }
 }

@@ -1,0 +1,8 @@
+type Product @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  title: String
+  description: String
+  slug: String
+  price: String
+  inStock: Int
+}

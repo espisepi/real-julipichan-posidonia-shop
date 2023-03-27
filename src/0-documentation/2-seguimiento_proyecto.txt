@@ -50,6 +50,8 @@
                     ---- (Managed hosting with custom domains, Continuous deployment)
                     ---- Continuous deployment (Git-based deployments)
 
+        - Creamos un amplify studio panel (desde el apartado de backend) y configuramos el modelo de base de datos, la autenticacion y la subida de archivos (file browser)
+
 
 
 
