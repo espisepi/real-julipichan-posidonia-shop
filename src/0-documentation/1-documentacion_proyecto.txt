@@ -22,12 +22,13 @@
 
 - Pasos a seguir:
     0- Crear pagina /panel y escribir ahí un componente inicial para empezar el desarrollo de los siguientes pasos
-    1- Implementar Servicios con API REST (Si se puede, hacer tests para comprobar que los servicios funcionan)
-    2- Implementar los hooks necesarios para consumir esos servicios
-    3- Implementar los estados globales con Context, Redux, Zustand, etc.
-    4- Implementar los hooks necesarios para consumir esos estados globales
-    5- Implementar los componentes y paginas sin echar cuenta de que se vean bonitos
-    6- Implementar los estilos (que se vea bonita la web)
+    1- Desplegar aplicacion en el hosting deseado (aws con amplify)  (https://docs.amplify.aws/guides/hosting/nextjs/q/platform/js/)
+    2- Implementar Servicios con API REST (incluido modelar la base de datos y montar el backend) (Si se puede, hacer tests para comprobar que los servicios funcionan)
+    3- Implementar los hooks necesarios para consumir esos servicios
+    4- Implementar los estados globales con Context, Redux, Zustand, etc.
+    5- Implementar los hooks necesarios para consumir esos estados globales
+    6- Implementar los componentes y paginas sin echar cuenta de que se vean bonitos
+    7- Implementar los estilos (que se vea bonita la web)
 
 
 - Estructura de carpetas del proyecto (en verdad este paso es super importante): (src/)

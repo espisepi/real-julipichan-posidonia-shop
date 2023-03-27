@@ -1,0 +1,31 @@
+
+
+
+===== PASOS A SEGUIR (APUNTADOS EN 1-DOCUMENTACION_PROYECTO)
+
+    0- OK Crear Proyecto NEXTJS (next-three template si quiero 3d) y crear pagina /panel y escribir ahí un componente inicial para empezar el desarrollo de los siguientes pasos
+    1- Desplegar aplicacion en el hosting deseado (aws con amplify)  (https://docs.amplify.aws/guides/hosting/nextjs/q/platform/js/)
+    2- Implementar Servicios con API REST (incluido modelar la base de datos y montar el backend) (Si se puede, hacer tests para comprobar que los servicios funcionan)
+    3- Implementar los hooks necesarios para consumir esos servicios
+    4- Implementar los estados globales con Context, Redux, Zustand, etc.
+    5- Implementar los hooks necesarios para consumir esos estados globales
+    6- Implementar los componentes y paginas sin echar cuenta de que se vean bonitos
+    7- Implementar los estilos (que se vea bonita la web)
+
+
+
+=========== SEGUIMIENTO DEL PROYECTO ===================================
+
+(27/03/23)
+1- Desplegar aplicacion en el hosting deseado (aws con amplify)  (https://docs.amplify.aws/guides/hosting/nextjs/q/platform/js/)
+    - npm install -g @aws-amplify/cli (NO FUNCIONABA, ASI QUE LO HICE CON YARN EN EL SIGUIENTE PASO)
+    - yarn global add @aws-amplify/cli (Al principio me daba un error de host key verification failed tal como este https://github.com/aws-amplify/amplify-cli/issues/1010, y era porque me faltaba el @ en @aws-amplify xD)
+    - amplify configure (https://docs.amplify.aws/cli/start/install/#configuring-the-amplify-cli)
+        -- Tenemos que seleccionar region:
+            --- seleccionamos N Virginia por ser la mas barata y estable () https://www.concurrencylabs.com/blog/choose-your-aws-region-wisely/     https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.RegionsAndAvailabilityZones.html
+            --- Al final no, voy a seleccionar Europa porque son servidores mas cercanos a España, en concreto EU-NORTH-1 Estocolmo.
+    - Deploy and host a hybrid app (SSG and SSR) (Leer directamente esa parte del manual) (https://docs.amplify.aws/guides/hosting/nextjs/q/platform/js/#deploy-and-host-a-hybrid-app-ssg-and-ssr)
+        - npm init next-app (ya lo hicimos, en verdad usamos el template next-three)
+        - añadimos git al proyecto y lo subimos a github (ya lo hicimos)
+        - añadimos amplify hosting al proyecto:
+            -- amplify init (dentro de la carpeta del proyecto)
