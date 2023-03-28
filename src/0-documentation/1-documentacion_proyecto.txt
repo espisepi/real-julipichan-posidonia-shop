@@ -30,6 +30,22 @@
     6- Implementar los componentes y paginas sin echar cuenta de que se vean bonitos
     7- Implementar los estilos (que se vea bonita la web)
 
+- Pasos a seguir PREVIOS a los Pasos a seguir anteriormente definidos:
+    - Montar la infraestructura 
+        - mysql
+        - phpmyadmin
+        - Spring java (backend)
+        - nextjs (react) (frontend)
+        - Docker - que contiene todo lo anterior
+
+        - Enlaces
+            -- https://github.com/callicoder/spring-security-react-ant-design-polls-app
+            -- https://www.callicoder.com/spring-boot-spring-security-jwt-mysql-react-app-part-1/
+            -- https://www.callicoder.com/spring-boot-spring-security-jwt-mysql-react-app-part-2/ 
+            -- https://www.callicoder.com/spring-boot-spring-security-jwt-mysql-react-app-part-3/
+            -- https://www.callicoder.com/spring-boot-spring-security-jwt-mysql-react-app-part-4/
+
+
 
 - Estructura de carpetas del proyecto (en verdad este paso es super importante): (src/)
 
